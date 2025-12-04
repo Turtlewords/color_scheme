@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
+    --radius-sm: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -161,36 +162,49 @@
   }
 }
 @layer utilities {
-  .table {
-    display: table;
+  .flex {
+    display: flex;
   }
-  .border-collapse {
-    border-collapse: collapse;
+  .grid {
+    display: grid;
   }
-  .resize {
-    resize: both;
+  .min-h-screen {
+    min-height: 100vh;
   }
-  .border {
+  .grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-evenly {
+    justify-content: space-evenly;
+  }
+  .rounded-sm {
+    border-radius: var(--radius-sm);
+  }
+  .border-2 {
     border-style: var(--tw-border-style);
-    border-width: 1px;
+    border-width: 2px;
   }
-  .p-4 {
-    padding: calc(var(--spacing) * 4);
+  .border-solid {
+    --tw-border-style: solid;
+    border-style: solid;
   }
-  .underline {
-    text-decoration-line: underline;
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
   }
+}
+.color-tab, .color, .hex {
+  border: 2px solid red;
+}
+.color-tab {
+  height: 100%;
 }
 @property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
@@ -199,7 +213,6 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
-      --tw-outline-style: solid;
     }
   }
 }

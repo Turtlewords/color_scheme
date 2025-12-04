@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="min-h-screen">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Scheme Generator</title>
+    <link rel="stylesheet" href="/src/output.css">
 </head>
-<body>
+<body class="min-h-screen">
     <main class="main">
-        <form class="color-form p-4">
+        <form class="color-form p-8 flex items-center justify-evenly">
             <input type="color" class="color-picker">
-            <select name="color-mode" id="color-mode">
+            <select name="color-mode" id="color-mode" class="p-3 rounded-sm border-solid border-2">
                 <option value="monochrome">Monochrome</option>
                 <option value="monochrome-dark">Monochrome-dark</option>
                 <option value="monochrome-light">Monochrome-light</option>
@@ -21,10 +22,10 @@
                 <option value="quad">Quad</option>
             </select>
 
-            <button type="submit">Get color scheme</button>
+            <button type="submit" class="submit-btn rounded-sm p-3 border-solid border-2">Get color scheme</button>
         </form>
 
-        <section class="color-results">
+        <section class="color-results grid grid-cols-5">
 
             <div class="color-tab">
                 <div class="color">
@@ -74,6 +75,6 @@
         </section>
 
     </main>
-    
+    <script src="index.js"></script>
 </body>
 </html>
