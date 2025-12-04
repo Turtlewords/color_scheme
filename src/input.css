@@ -4,6 +4,12 @@
     border: 2px solid red;
 }
 
-.color-tab {
-    height: 100%;
+
+
+.color {
+    height: 85%;
+}
+
+.hex {
+    height: 15%;
 }

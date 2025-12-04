@@ -168,11 +168,17 @@
   .grid {
     display: grid;
   }
+  .h-full {
+    height: 100%;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
   .grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
   }
   .items-center {
     align-items: center;
@@ -201,8 +207,11 @@
 .color-tab, .color, .hex {
   border: 2px solid red;
 }
-.color-tab {
-  height: 100%;
+.color {
+  height: 85%;
+}
+.hex {
+  height: 15%;
 }
 @property --tw-border-style {
   syntax: "*";
