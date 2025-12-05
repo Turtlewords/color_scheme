@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="/src/output.css">
 </head>
 <body class="min-h-screen">
-    <main class="main min-h-screen flex flex-col">
-        <form class="color-form p-8 flex items-center justify-evenly h-full">
-            <input type="color" class="color-picker">
-            <select name="color-mode" id="color-mode" class="p-3 rounded-sm border-solid border-2">
+    <main class="main min-h-screen flex flex-col justify-stretch">
+        <form class="color-form p-8 flex flex-col lg:flex-row items-center justify-evenly h-full gap-6">
+            <input type="color" class="color-picker w-20 h-16 border-2 border-solid border-gray-300">
+            <select name="color-mode" id="color-mode" class="p-3 rounded-sm border-solid border-2 grow-3">
                 <option value="monochrome">Monochrome</option>
                 <option value="monochrome-dark">Monochrome-dark</option>
                 <option value="monochrome-light">Monochrome-light</option>
@@ -22,53 +22,53 @@
                 <option value="quad">Quad</option>
             </select>
 
-            <button type="submit" class="submit-btn rounded-sm p-3 border-solid border-2">Get color scheme</button>
+            <button type="submit" class="submit-btn rounded-sm p-3 border-solid border-2 cursor-pointer">Get color scheme</button>
         </form>
 
-        <section class="color-results grid grid-cols-5 h-full">
+        <section class="color-results grid grid-cols-5 h-full grow">
 
             <div class="color-tab">
-                <div class="color">
+                <div class="color color-one">
 
                 </div>
                 <div class="hex">
-
+                    <p class="hex-code hex-one"></p>
                 </div>
             </div>
 
             <div class="color-tab">
-                <div class="color">
+                <div class="color color-two">
 
                 </div>
                 <div class="hex">
-                    
+                    <p class="hex-code hex-two"></p>
                 </div>
             </div>
 
             <div class="color-tab">
-                <div class="color">
+                <div class="color color-three">
 
                 </div>
                 <div class="hex">
-                    
+                    <p class="hex-code hex-three"></p>
                 </div>
             </div>
 
             <div class="color-tab">
-                <div class="color">
+                <div class="color color-four">
 
                 </div>
                 <div class="hex">
-                    
+                    <p class="hex-code hex-four"></p>
                 </div>
             </div>
 
             <div class="color-tab">
-                <div class="color">
+                <div class="color color-five">
 
                 </div>
                 <div class="hex">
-                    
+                    <p class="hex-code hex-five"></p>
                 </div>
             </div>
             

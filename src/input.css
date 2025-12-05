@@ -1,15 +1,23 @@
 @import "tailwindcss";
 
-.color-tab, .color, .hex {
-    border: 2px solid red;
+
+
+.color-tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 }
 
-
-
 .color {
-    height: 85%;
+    min-height: 400px;
+    flex-grow: 4;
 }
 
 .hex {
-    height: 15%;
+    min-height: 100px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
 }
